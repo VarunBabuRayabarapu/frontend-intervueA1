@@ -1,0 +1,56 @@
+.option-text-id-answer {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option-text-answer {
+    font-weight: 500;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.option-bar-active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border: 4px solid #8F64E1;
+}
+
+.option-content-active {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+    border: 1.5x solid #8F64E1;
+}
+
+.submit {
+    width: 55%;
+    margin-left: 15vw;
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+.submit button {
+    padding: 15px 54px;
+    color: #FFFFFF;
+    background: linear-gradient(99.18deg, #8F64E1 -46.89%, #1D68BD 223.45%);
+    border: none;
+    border-radius: 34px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+}
