@@ -1,44 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { fetchAllQuestions } from "../services/getQuestions";
 import "./ViewQuestion.css";
 
 const AllPolls = () => {
-    const [questions, setQuestions] = useState([
-        {
-            question: "Which planet is known as the Red Planet?",
-            options: {
-                mars: ["Ash", "Beena"],
-                venus: ["Ash", "Beena", "Kay"],
-                maps: ["Ash", "Beena"],
-                vetus: ["Ash", "Beena", "Kay"],
-            },
-            totalVotes: 10,
-        },
-        {
-            question: "Which planet is known as the Red Plajjjfj j  n net?",
-            options: {
-                mars: ["Ash", "Beena"],
-                venus: ["Ash", "Beena", "Kay"],
-                maps: ["Ash", "Beena"],
-                vetus: ["Ash", "Beena", "Kay"],
-            },
-            totalVotes: 10,
-        },
-        {
-            question: "Which planet is known as the Rejbjbjkbd Planet?",
-            options: {
-                mars: ["Ash", "Beena"],
-                venus: ["Ash", "Beena", "Kay"],
-                maps: ["Ash", "Beena"],
-                vetus: ["Ash", "Beena", "Kay"],
-            },
-            totalVotes: 10,
-        },
-    ]);
+    const [questions, setQuestions] = useState([]);
 
     const getPercentage = (optionVotes, totalVotes) => {
         if (!totalVotes || totalVotes === 0) return 0;
         return ((optionVotes.length / totalVotes) * 100).toFixed(0);
     };
+
+    useEffect(() => {
+        const loadQuestions = async () => {
+            const data = await fetchAllQuestions();
+            setQuestions(data || []);
+        };
+        loadQuestions();
+    }, []);
 
     return (
         <>
