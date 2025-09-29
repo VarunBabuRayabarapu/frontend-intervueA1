@@ -1,18 +1,42 @@
-# React + Vite
+React + Vite Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React frontend built with Vite. It supports HMR (Hot Module Replacement), uses ESLint for code quality, and has a service-based architecture for API calls.
 
-Currently, two official plugins are available:
+Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React 18 with functional components and hooks
 
-## React Compiler
+Vite for fast development and optimized builds
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+ESLint integrated for code quality
 
-Note: This will impact Vite dev & build performances.
+Socket.io integration for real-time updates
 
-## Expanding the ESLint configuration
+Config-based API URLs for flexible environment setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Service layer for API calls
+
+Clean separation of components, services, and styles
+
+Folder Structure
+src/
+ ├─ components/          # React components
+ ├─ services/            # API service functions
+ ├─ App.jsx              # Main app entry
+ ├─ main.jsx             # Vite entry point
+ └─ utils                # API & environment configuration
+Config
+
+API base URL is centralized in config.js:
+
+const config = {
+    API_URL: "http://localhost:5000"
+};
+export default config;
+
+This allows consistent API calls and easy switching between environments (dev, staging, production).
+
+Use commands :
+npm install --for installations
+
+npm run dev -- for running the app
