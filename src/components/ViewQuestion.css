@@ -1,0 +1,145 @@
+.poll-history {
+    display: flex;
+    justify-content: end;
+    padding-right: 3%;
+    padding-top: 30px;
+}
+
+.poll-history button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 14px;
+    color: #FFFFFF;
+    background-color: #8F64E1;
+    border: none;
+    border-radius: 34px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.poll-history button img {
+    height: 15px;
+}
+
+.view-question-heading {
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 15vw;
+    margin-top: 35px;
+}
+
+.view-question-container {
+    width: 55%;
+    max-width: 940px;
+    margin-left: 15vw;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #AF8FF1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.question-view {
+    background: linear-gradient(90deg, #343434 0%, #6E6E6E 100%);
+    color: #FFFFFF;
+    padding-left: 3%;
+    height: 50px;
+}
+
+.question-view h1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px;
+}
+
+.option-box {
+    position: relative;
+    background: #f2f2f2;
+    border-radius: 6px;
+    padding: 12px;
+    overflow: hidden;
+}
+
+.option-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #6766D5;
+    z-index: 1;
+}
+
+.option-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.option-text-id {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    color: #6766D5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option-text {
+    color: #FFFFFF;
+    font-weight: 500;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.option-percentage {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.ask-new-question {
+    width: 55%;
+    margin-left: 15vw;
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+.ask-new-question button {
+    padding: 15px 34px;
+    color: #FFFFFF;
+    background: linear-gradient(99.18deg, #8F64E1 -46.89%, #1D68BD 223.45%);
+    border: none;
+    border-radius: 34px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/*using this for all polls */
+.view-all-heading {
+    font-size: 40px;
+    font-weight: 400;
+    margin-left: 14.5vw;
+}
+
+.view-all-heading span {
+    font-weight: 600;
+}
